@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>天仁民防信息化平台</title>
+	</head>
+	<style type="text/css">
+		.container {
+			margin: 0 auto;
+			width: 600px;
+		}
+		
+		#myCanvas {
+			border: 1px solid #000000;
+		}
+	</style>
+
+	<body>
+		<div class="container">
+			<canvas id="myCanvas" width="600" height="600">
+</canvas>
+		</div>
+
+		<script>
+			//Canvas 的左上角是（0，0）
+			//基于左上角往右 X 为正，往下 Y 为正，反之为负
+			//fillRect(x,y,width,height) 方法定义了矩形当前的填充方式。
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			drawScreen(ctx);
+
+			function drawScreen(ctx) {
+				//成都1号线
+				ctx.moveTo(300, 300);
+				ctx.lineTo(300, 100);
+				ctx.strokeStyle = "red";
+				ctx.stroke();
+				
+				ctx.fillStyle = "black";
+				ctx.moveTo(300, 300);
+				ctx.lineTo(300, 550);
+				ctx.strokeStyle = "blue";
+				ctx.stroke();
+				
+				
+				ctx.moveTo(300, 550);
+				ctx.lineTo(550, 550);
+				ctx.strokeStyle = "blue";
+				ctx.stroke();
+				
+				ctx.moveTo(300, 550);
+				ctx.lineTo(320, 530);
+				ctx.strokeStyle = "blue";
+				ctx.stroke();
+				
+				ctx.moveTo(320, 530);
+				ctx.lineTo(350, 530);
+				ctx.strokeStyle = "blue";
+				ctx.stroke();
+				
+				
+				//成都7号线
+				
+				ctx.moveTo(200, 200);
+				ctx.lineTo(400, 200);
+				ctx.strokeStyle = "yellow";
+				ctx.stroke();
+
+				ctx.moveTo(200, 200);
+				ctx.lineTo(200, 400);
+				ctx.strokeStyle = "green";
+				ctx.stroke();
+
+				ctx.moveTo(200, 400);
+				ctx.lineTo(400, 400);
+				ctx.strokeStyle = "green";
+				ctx.stroke();
+
+				ctx.moveTo(400, 200);
+				ctx.lineTo(400, 400);
+				ctx.strokeStyle = "green";
+				ctx.stroke();
+
+
+				//2号线
+				ctx.moveTo(100, 100);
+				ctx.lineTo(150, 100);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				
+				ctx.moveTo(150, 100);
+				ctx.lineTo(280, 300);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				
+				ctx.moveTo(280, 300);
+				ctx.lineTo(300, 300);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				
+				ctx.moveTo(300, 300);
+				ctx.lineTo(350, 350);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				
+				ctx.moveTo(350, 350);
+				ctx.lineTo(450, 350);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				
+				ctx.moveTo(450, 350);
+				ctx.lineTo(500, 450);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				ctx.moveTo(500, 450);
+				ctx.lineTo(550, 450);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				
+				//3号线
+				ctx.moveTo(300, 350);
+				ctx.lineTo(250, 350);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				
+				ctx.moveTo(250, 350);
+				ctx.lineTo(200, 400);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				
+				ctx.moveTo(250, 350);
+				ctx.lineTo(200, 400);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				
+				ctx.moveTo(200, 400);
+				ctx.lineTo(130, 400);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				
+				ctx.moveTo(130, 400);
+				ctx.lineTo(50, 484);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				
+				ctx.moveTo(300, 350);
+				ctx.lineTo(350, 300);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				
+				ctx.moveTo(350, 300);
+				ctx.lineTo(350, 200);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				
+				ctx.moveTo(350, 200);
+				ctx.lineTo(500, 100);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				
+				ctx.moveTo(500, 100);
+				ctx.lineTo(550, 100);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				//10号线
+				ctx.moveTo(200, 400);
+				ctx.lineTo(100, 500);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				
+				
+				
+				//4号线
+				ctx.moveTo(300, 280);
+				ctx.lineTo(100, 280);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				
+				ctx.moveTo(100, 280);
+				ctx.lineTo(25, 350);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				
+				ctx.moveTo(300, 280);
+				ctx.lineTo(350, 300);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				
+				ctx.moveTo(350, 300);
+				ctx.lineTo(500, 300);
+				ctx.strokeStyle = "#222";
+				ctx.stroke();
+				
+			}
+
+	
+		</script>
+	</body>
+
+</html>
