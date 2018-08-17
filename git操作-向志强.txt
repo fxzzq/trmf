@@ -1,0 +1,17 @@
+1 配置在本地ssh key 
+ssh-keygen -t  rsa -C "1040175504@qq.com"
+
+2、在github 上set公钥
+id_rsa.pub的内容。
+3、创建文件夹命名为gitrep
+
+4、进入gitrep,右键gitbash,设置用户名邮箱
+ git config  --global user.email 1040175504@qq.com
+ git config  --global user.name  fxzzq
+ 4、克隆代码下来
+ git clone  地址
+ 5.本地文件拖动到gitrep下（不一致删除，只保留一份，一般本地修改，不在github上修改，github只是托管）
+ 6.进入所在克隆地址目录下，使用以下命令：
+	git add .      
+git commit  -m  "v1 first commit(第一次提交 )"  
+git push -u origin master  （注：此操作目的是把本地仓库push到github上面，此步骤需要你输入帐号和密码）
