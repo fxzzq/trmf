@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title>选项卡演示</title>
+        <link href="css/mui.min.css" rel="stylesheet" />
+        <style>
+        </style>
+    </head>
+
+    <body>
+        <div class="mui-content">
+            <nav id="bar" class="mui-bar mui-bar-tab">
+                <a class="mui-tab-item mui-active" href="tab-main.html" data-id="main">
+                    <span class="mui-icon mui-icon-home"></span>
+                    <span class="mui-tab-label">首页</span>
+                </a>
+                <a class="mui-tab-item" href="tab-message.html" data-id="message">
+                    <span class="mui-icon mui-icon-email"></span>
+                    <span class="mui-tab-label">消息</span>
+                </a>
+                <a class="mui-tab-item" href="tab-contact.html" data-id="contact">
+                    <span class="mui-icon mui-icon-contact"></span>
+                    <span class="mui-tab-label">通讯录</span>
+                </a>
+                <a class="mui-tab-item" href="tab-setting.html" data-id="setting">
+                    <span class="mui-icon mui-icon-gear"></span>
+                    <span class="mui-tab-label">设置</span>
+                </a>
+            </nav>
+        </div>
+        <script src="js/mui.min.js"></script>
+        <script>
+            mui.init();
+      
+            mui.plusReady(function() {
+                var self = plus.webview.currentWebview();
+                var current = '';
+                var styles = {
+                    top: '20px',
+                    bottom: '51px'
+                };
+                var tabsConfig = {
+                    main: {
+                        url: 'tab-main.html',
+                        styles: styles,
+                        default: true
+                    },
+                    message: {
+                        url: 'tab-message.html',
+                        styles: styles
+                    },
+                    contact: {
+                        url: 'tab-contact.html',
+                        styles: styles
+                    },
+                    setting: {
+                        url: 'tab-setting.html',
+                        styles: styles
+                    }
+                };
+                var tabs = {};
+                for (id in tabsConfig) {
+                    tabs[id] = plus.webview.create(tabsConfig[id].url, id, tabsConfig[id].styles);
+                    if (tabsConfig[id]['default']) {
+                        self.append(tabs[id]);
+                        current = id;
+                    }
+                }
+                mui('#bar').on('tap', 'a', function(e) {
+                    if (current == this.dataset.id) {
+                        return;
+                    }
+                    tabs[this.dataset.id].show();
+                    tabs[current].hide();
+                    current = this.dataset.id;
+                });
+            });
+              mui('body').on('click','a',function(){document.location.href=this.href;});
+        </script>
+    </body>
+</html>
