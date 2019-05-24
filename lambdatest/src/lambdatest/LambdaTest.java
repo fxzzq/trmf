@@ -8,7 +8,7 @@ public class LambdaTest {
 		
 	//	MathOperation sx= (String x) -> x+s1;
 		//sx.s("123");
-		
+		int xzq=1;
 		int x=4;
 	//	(x) -> 2 * x;
 		
